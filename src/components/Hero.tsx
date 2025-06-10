@@ -1,6 +1,4 @@
 import React from 'react';
-// Import the background image
-import backgroundImage from '../assets/background.jpg';
 
 interface HeroProps {
   data: {
@@ -29,18 +27,10 @@ const Hero: React.FC<HeroProps> = ({ data }) => {
 
   return (
     <section id="hero" className="min-h-screen pt-20 relative overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-        }}
-      ></div>
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900"></div>
       
-      {/* Background Overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80"></div>
-      
-      {/* Geometric Background Elements (kept for visual interest) */}
+      {/* Geometric Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
@@ -53,7 +43,7 @@ const Hero: React.FC<HeroProps> = ({ data }) => {
           <div className="mb-6">
             <div className="inline-flex flex-wrap gap-2 justify-center">
               {data.credentials.map((credential, index) => (
-                <span
+                <span 
                   key={index}
                   className="px-3 py-1 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-300 text-sm font-medium"
                 >
@@ -76,8 +66,8 @@ const Hero: React.FC<HeroProps> = ({ data }) => {
           {/* Location */}
           <div className="flex items-center justify-center mb-8 text-slate-400">
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
             {data.location}
