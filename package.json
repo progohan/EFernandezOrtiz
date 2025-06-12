@@ -1,6 +1,7 @@
 {
   "name": "react_repo",
   "private": true,
+  "homepage": "https://progohan.github.io/EFernandez",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
