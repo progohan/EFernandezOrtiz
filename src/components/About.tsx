@@ -59,27 +59,27 @@ const About: React.FC<AboutProps> = ({ data, achievements }) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                    <span className="text-slate-300">P3 Delivery Models</span>
+                    <span className="text-slate-300">Alternative Project Delivery (P3, CMAR, DB, Alliance)</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
-                    <span className="text-slate-300">Design-Build Projects</span>
+                    <span className="text-slate-300">Commercial & Contract Management</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                    <span className="text-slate-300">CMAR Execution</span>
+                    <span className="text-slate-300">Program & Project Controls</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
-                    <span className="text-slate-300">AI & Big Data</span>
+                    <span className="text-slate-300">Data-Driven Construction (AI, Big Data, Cloud)</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                    <span className="text-slate-300">Cloud Computing</span>
+                    <span className="text-slate-300">Cross-Functional Leadership & Stakeholder Engagement</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
-                    <span className="text-slate-300">Team Leadership</span>
+                    <span className="text-slate-300">Civil Engineering & Execution Strategy</span>
                   </div>
                 </div>
               </div>
