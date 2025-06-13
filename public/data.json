@@ -218,10 +218,10 @@
   ],
   "key_projects": [
     {
-      "name": "Susquehanna River Rail Bridge CMAR Project",
+      "name": "Susquehanna River Bridge CMAR Project",
       "value": "$2.7B",
       "role": "Project Commercial Manager",
-      "company": "Flatiron Dragados",
+      "company": "Flatiron Dragados USA",
       "location": "Washington DC, USA",
       "client": "Amtrak",
       "contribution": "Enhanced commercial terms",
@@ -254,7 +254,7 @@
       "company": "Ferrovial Construction US & Canada",
       "location": "Houston TX, USA",
       "client": "InDOT",
-      "achievement": "Delivered six months ahead of schedule, saving over $1M",
+      "achievement": "58 mi toll road infrastructure",
       "timeframe": "Oct 2017 - Feb 2022"
     },
     {
@@ -346,6 +346,7 @@
       "value": "€60M",
       "role": "Senior Project Manager",
       "company": "Fonorte",
+      "scope": "Two parallel - 2 km tunnel (NATM)",
       "timeframe": "Nov 2008 - Jun 2010"
     },
     {
