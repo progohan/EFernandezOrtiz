@@ -37,7 +37,7 @@
   "work_experience": [
     {
       "position": "Project Director",
-      "company": "Flatiron Constructors Inc.",
+      "company": "Flatiron Dragados Corp.",
       "location": "Washington DC, USA",
       "duration": "06.2024 - Present",
       "responsibilities": [
@@ -108,7 +108,7 @@
     },
     {
       "position": "Senior Project Manager",
-      "company": "Fonorte",
+      "company": "Fonorte EC S.A.",
       "location": "Bilbao, Spain",
       "duration": "11.2008 - 06.2010",
       "responsibilities": [
@@ -220,16 +220,20 @@
     {
       "name": "Susquehanna River Rail Bridge CMAR Project",
       "value": "$2.7B",
-      "role": "Project Director",
-      "company": "Flatiron Constructors Inc.",
+      "role": "Project Commercial Manager",
+      "company": "Flatiron Dragados",
       "location": "Washington DC, USA",
+      "client": "Amtrak",
+      "contribution": "Enhanced commercial terms",
       "timeframe": "Jun 2024 - Present"
     },
     {
       "name": "SR-400 Express Lanes P3 Project",
       "value": "$4.6B",
       "role": "Senior Project Manager",
-      "company": "Acciona Construction USA Corp.",
+      "company": "Acciona Construction USA",
+      "location": "Atlanta GA, USA",
+      "client": "GDOT",
       "contribution": "Enhanced proposals",
       "timeframe": "Jun 2023 - Jun 2024"
     },
@@ -237,7 +241,9 @@
       "name": "I-10 Calcasieu River Bridge P3",
       "value": "$2.3B",
       "role": "Senior Project Manager",
-      "company": "Acciona Construction USA Corp.",
+      "company": "Acciona Construction USA",
+      "location": "Lake Charles LA, USA",
+      "client": "LADOTD",
       "contribution": "Enhanced proposals",
       "timeframe": "Jun 2023 - Jun 2024"
     },
@@ -245,7 +251,9 @@
       "name": "TXDOT Grand Parkway Segments H, I-1, and I-2",
       "value": "$950M",
       "role": "Technical Manager",
-      "company": "Ferrovial Construction",
+      "company": "Ferrovial Construction US & Canada",
+      "location": "Houston TX, USA",
+      "client": "InDOT",
       "achievement": "Delivered six months ahead of schedule, saving over $1M",
       "timeframe": "Oct 2017 - Feb 2022"
     },
@@ -255,14 +263,16 @@
       "scope": "21 miles of interstate",
       "role": "Senior Project Manager",
       "company": "Isolux Corsan USA",
+      "client": "TxDOT",
+      "location": "Bloomington IN, USA",
       "timeframe": "Aug 2014 - Oct 2017"
     },
     {
       "name": "Tramway Corridor Ayacucho Avenue",
       "value": "$320M",
       "timeframe": "Apr 2013 - Aug 2014",
-      "role": "Project Manager",
-      "company": "OHL",
+      "role": "Technical Director",
+      "company": "Team Engineering for OHL",
       "client": "Metro de Medellín",
       "scope": "2 km tram infrastructure with cut & cover structures",
       "location": "Medellín, Colombia",
@@ -276,10 +286,11 @@
       "name": "High Speed Rail Zizurkil to Andoain",
       "value": "€193.5M",
       "timeframe": "May 2012 - Aug 2014",
-      "role": "Senior Project Manager",
-      "company": "Dragados/Amenabar/Comsa/Isolux Corsán JV",
+      "role": "Technical Director",
+      "company": "Team Engineering for Dragados/Amenabar/Comsa/Isolux Corsán JV",
       "scope": "5 km tunnel (NATM) and 200-meter concrete bridge",
       "location": "Basque Country, Spain",
+      "client": "ADIF",
       "key_achievements": [
         "Construction of 5 km tunnel using NATM methodology",
         "Delivery of 200-meter concrete bridge structure",
@@ -290,10 +301,11 @@
       "name": "High Speed Rail Nudo de Venta de Baños",
       "value": "€83M",
       "timeframe": "Apr 2010 - Aug 2014",
-      "role": "Project Manager",
-      "company": "Ferrovial",
+      "role": "Technical Director",
+      "company": "Team Engineering for Ferrovial",
       "scope": "Two pre-stressed concrete bridges (1,330m and 1,128m)",
-      "location": "Castile and León, Spain",
+      "client": "ADIF",
+      "location": "Castilla y León, Spain",
       "key_achievements": [
         "Delivery of major pre-stressed concrete bridge structures",
         "High-speed rail network expansion contribution",
@@ -304,10 +316,11 @@
       "name": "High Speed Rail Andoain to Urnieta",
       "value": "€80M",
       "timeframe": "Apr 2011 - Aug 2014",
-      "role": "Project Manager",
-      "company": "Ferrovial/Amenabar JV",
+      "role": "Technical Director",
+      "company": "Team Engineering for Ferrovial/Amenabar JV",
       "scope": "340m pre-stressed concrete bridge, 200m prefabricated beams bridge, 2 km tunnel (NATM)",
       "location": "Basque Country, Spain",
+      "client": "ADIF",
       "key_achievements": [
         "Construction of complex bridge structures",
         "Implementation of NATM tunneling technology",
@@ -318,8 +331,8 @@
       "name": "High Speed Rail Cabezón de Pisuerga to San Martín de Valvení",
       "value": "€76M",
       "timeframe": "Apr 2010 - May 2012",
-      "role": "Project Manager",
-      "company": "Ferrovial",
+      "role": "Technical Director",
+      "company": "Team Engineering for Ferrovial",
       "scope": "2 km tunnel and two prefabricated bridges",
       "location": "Castile and León, Spain",
       "key_achievements": [
