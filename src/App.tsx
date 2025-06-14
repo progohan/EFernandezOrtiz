@@ -112,7 +112,11 @@ function App() {
       <Hero data={resumeData.personal_info} />
       <About data={resumeData.personal_info} achievements={resumeData.key_achievements} />
       <Experience experiences={resumeData.work_experience} />
-      <CoreCompetencies competencies={resumeData.core_competencies} technicalExpertise={resumeData.technical_expertise} />
+            <CoreCompetencies
+        competencies={resumeData.core_competencies}
+        technicalExpertise={resumeData.technical_expertise}
+        leadershipSkills={resumeData.leadership_skills}
+      />
       <KeyProjects projects={resumeData.key_projects} />
       <Education 
         education={resumeData.education} 

@@ -8,9 +8,14 @@ interface CoreCompetenciesProps {
     technical_skills: string[];
     technology_skills: string[];
   };
+  leadershipSkills: string[];
 }
 
-const CoreCompetencies: React.FC<CoreCompetenciesProps> = ({ competencies, technicalExpertise }) => {
+const CoreCompetencies: React.FC<CoreCompetenciesProps> = ({
+  competencies,
+  technicalExpertise,
+  leadershipSkills,
+}) => {
   const competencyIcons = {
     'Strategic Planning & Execution': '🎯',
     'Project & Program Management': '📊',
@@ -129,6 +134,24 @@ const CoreCompetencies: React.FC<CoreCompetenciesProps> = ({ competencies, techn
                   {technicalExpertise.technology_skills.map((skill, index) => (
                     <div key={index} className="flex items-center p-3 bg-slate-700/30 rounded-lg border border-slate-600/30">
                       <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                      <span className="text-slate-300">{skill}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-semibold text-yellow-400 mb-4 flex items-center">
+                  <span className="text-2xl mr-3">🏅</span>
+                  Leadership Skills
+                </h3>
+                <div className="space-y-3">
+                  {leadershipSkills.map((skill, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center p-3 bg-slate-700/30 rounded-lg border border-slate-600/30"
+                    >
+                      <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
                       <span className="text-slate-300">{skill}</span>
                     </div>
                   ))}
