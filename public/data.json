@@ -224,7 +224,8 @@
       "company": "Flatiron Dragados USA",
       "location": "Washington DC, USA",
       "client": "Amtrak",
-      "contribution": "Enhanced commercial terms",
+      "achievement": "Managing all commercial activities including contracts, procurement, project controls, communications, and financial management",
+      "scope": "Replacement of the existing Susquehanna River Bridge with two new parallel, 1mile fixed-span structures featuring a total of four tracks",
       "timeframe": "Jun 2024 - Present"
     },
     {
@@ -234,7 +235,8 @@
       "company": "Acciona Construction USA",
       "location": "Atlanta GA, USA",
       "client": "GDOT",
-      "contribution": "Enhanced proposals",
+      "achievement": "Excelled in capture of major projects, enhancing proposal quality and securing new business, contributed to enhancing proposals, and facilitated stakeholder meetings to ensure transparency and maintain strong client relationships",
+      "scope": "16-mile express managed lanes",
       "timeframe": "Jun 2023 - Jun 2024"
     },
     {
@@ -244,7 +246,8 @@
       "company": "Acciona Construction USA",
       "location": "Lake Charles LA, USA",
       "client": "LADOTD",
-      "contribution": "Enhanced proposals",
+      "achievement": "Excelled in capture of major projects, enhancing proposal quality and securing new business, contributed to enhancing proposals, and facilitated stakeholder meetings to ensure transparency and maintain strong client relationships",
+      "scope": "New 8-lane bridge and approaches along a 5.5-mile I-10 corridor",
       "timeframe": "Jun 2023 - Jun 2024"
     },
     {
@@ -254,16 +257,18 @@
       "company": "Ferrovial Construction US & Canada",
       "location": "Houston TX, USA",
       "client": "InDOT",
-      "achievement": "58 mi toll road infrastructure",
+      "achievement": "Successfully delivered all RFC design packages for the TxDOT $950M Design-Build Grand Parkway Segments H, I-1, and I-2 Project, managed over 300 design change modifications, enhancing project safety and cost-effectiveness, provided leadership and strategic direction as Construction Technical Office Manager**, supporting the US management team, and collaborated closely with joint venture partners, ensuring adherence to the Design-Build contract with TxDOT",
+      "scope": "58-mile toll road infrastructure",
       "timeframe": "Oct 2017 - Feb 2022"
     },
     {
       "name": "INDOT I-69 Section 5",
       "value": "$400M",
-      "scope": "21 miles of interstate",
+      "scope": "21-miles of interstate I-69",
       "role": "Senior Project Manager",
       "company": "Isolux Corsan USA",
-      "client": "TxDOT",
+      "client": "TxDOT",      
+      "achievement": "Led the technical and commercial management ensuring successful coordination of design-build activities, project controls, and procurement",
       "location": "Bloomington IN, USA",
       "timeframe": "Aug 2014 - Oct 2017"
     },
@@ -274,13 +279,9 @@
       "role": "Technical Director",
       "company": "Team Engineering for OHL",
       "client": "Metro de Medellín",
-      "scope": "2 km tram infrastructure with cut & cover structures",
+      "scope": "2-km tram infrastructure with cut & cover structures",
       "location": "Medellín, Colombia",
-      "key_achievements": [
-        "Successful delivery of urban tram infrastructure",
-        "Implementation of cut & cover construction methodology",
-        "Integration with existing urban transit system"
-      ]
+      "achievement": "Implementation of cut & cover construction methodology"
     },
     {
       "name": "High Speed Rail Zizurkil to Andoain",
@@ -288,14 +289,10 @@
       "timeframe": "May 2012 - Aug 2014",
       "role": "Technical Director",
       "company": "Team Engineering for Dragados/Amenabar/Comsa/Isolux Corsán JV",
-      "scope": "5 km tunnel (NATM) and 200-meter concrete bridge",
+      "scope": "5-km tunnel (NATM) and 200-meter concrete bridge",
       "location": "Basque Country, Spain",
       "client": "ADIF",
-      "key_achievements": [
-        "Construction of 5 km tunnel using NATM methodology",
-        "Delivery of 200-meter concrete bridge structure",
-        "High-speed rail infrastructure development"
-      ]
+      "achievement": "Design of 5km tunnel using NATM methodology"
     },
     {
       "name": "High Speed Rail Nudo de Venta de Baños",
@@ -306,11 +303,7 @@
       "scope": "Two pre-stressed concrete bridges (1,330m and 1,128m)",
       "client": "ADIF",
       "location": "Castilla y León, Spain",
-      "key_achievements": [
-        "Delivery of major pre-stressed concrete bridge structures",
-        "High-speed rail network expansion contribution",
-        "Advanced concrete construction techniques"
-      ]
+      "achievement": "Delivered major pre-stressed concrete bridge structures, contributed to high-speed rail network expansion, and implemented advanced concrete construction techniques"
     },
     {
       "name": "High Speed Rail Andoain to Urnieta",
@@ -318,14 +311,10 @@
       "timeframe": "Apr 2011 - Aug 2014",
       "role": "Technical Director",
       "company": "Team Engineering for Ferrovial/Amenabar JV",
-      "scope": "340m pre-stressed concrete bridge, 200m prefabricated beams bridge, 2 km tunnel (NATM)",
+      "scope": "340-meter pre-stressed concrete bridge, 200-meter prefabricated beams bridge, 2-km tunnel (NATM)",
       "location": "Basque Country, Spain",
       "client": "ADIF",
-      "key_achievements": [
-        "Construction of complex bridge structures",
-        "Implementation of NATM tunneling technology",
-        "Integration of multiple construction methodologies"
-      ]
+      "achievement": "Constructed complex bridge structures, implemented NATM tunneling technology, and integrated multiple construction methodologies"
     },
     {
       "name": "High Speed Rail Cabezón de Pisuerga to San Martín de Valvení",
@@ -333,20 +322,16 @@
       "timeframe": "Apr 2010 - May 2012",
       "role": "Technical Director",
       "company": "Team Engineering for Ferrovial",
-      "scope": "2 km tunnel and two prefabricated bridges",
+      "scope": "2-km tunnel and two prefabricated bridges",
       "location": "Castile and León, Spain",
-      "key_achievements": [
-        "Successful tunnel construction completion",
-        "Prefabricated bridge installation",
-        "High-speed rail corridor development"
-      ]
+      "achievement": "Successfully completed tunnel construction, installed prefabricated bridges, and developed high-speed rail corridors"      
     },
     {
       "name": "High-Speed Rail Legutiano to Escoriatza",
       "value": "€60M",
       "role": "Senior Project Manager",
       "company": "Fonorte",
-      "scope": "Two parallel - 2 km tunnel (NATM)",
+      "scope": "Two parallel 2-km tunnel (NATM)",
       "timeframe": "Nov 2008 - Jun 2010"
     },
     {
@@ -355,13 +340,9 @@
       "timeframe": "Nov 2008 - Jun 2009",
       "role": "Construction Manager",
       "company": "Construction contractor",
-      "scope": "7 km water pipeline including 700m pipe jacking",
+      "scope": "7-km water pipeline including 700-meter pipe jacking",
       "location": "Gernika, Basque Country, Spain",
-      "key_achievements": [
-        "Successful pipe jacking operation completion",
-        "Water infrastructure system enhancement",
-        "Trenchless construction methodology application"
-      ]
+      "achievement": "Successfully completed pipe jacking operations, enhanced water infrastructure systems, and applied trenchless construction methodologies"
     },
     {
       "name": "High-Speed Rail Cornellà del Terri to Vilademuls",
@@ -377,13 +358,9 @@
       "timeframe": "Jun 2007 - Nov 2007",
       "role": "Project Manager",
       "company": "Construction contractor",
-      "scope": "3 km high capacity to urban road conversion with demolitions, contaminated material excavation, drainage systems",
+      "scope": "3-km high capacity to urban road conversion with demolitions, contaminated material excavation, drainage systems",
       "location": "Basque Country, Spain",
-      "key_achievements": [
-        "Urban road infrastructure transformation",
-        "Environmental remediation and contaminated material management",
-        "Utility infrastructure relocation and installation"
-      ]
+      "achievement": "Transformed urban road infrastructure, managed environmental remediation and contaminated materials, and relocated and installed utility infrastructure"
     },
     {
       "name": "Toll Road Intersection R-3/M-50",
@@ -393,24 +370,21 @@
       "company": "Construction contractor",
       "scope": "Intersection of two toll roads with seven prefabricated bridges",
       "location": "Madrid, Spain",
-      "key_achievements": [
-        "Complex highway intersection construction",
-        "Multiple prefabricated bridge installations",
-        "Traffic management during construction"
-      ]
+      "achievement": "Constructed complex highway intersections, installed multiple prefabricated bridges, and managed traffic during construction"
     },
     {
       "name": "Toll Road AP1 Eibar to Bergara",
       "value": "€79M",
-      "scope": "8 km toll road",
+      "scope": "8-km toll road",
       "role": "Construction Supervision Manager",
+      "location": "Basque Country, Spain",
       "company": "Prointec",
       "timeframe": "Jan 2003 - Sep 2005"
     },
     {
       "name": "Urumea Highway Martutene to Astigarraga",
       "value": "€67M",
-      "scope": "6 km highway",
+      "scope": "6-km highway",
       "role": "Construction Supervision Manager",
       "company": "Prointec",
       "timeframe": "Jan 2003 - Sep 2005"

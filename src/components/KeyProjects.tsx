@@ -5,9 +5,10 @@ interface Project {
   value: string;
   role: string;
   company: string;
+  client?: string;
   location?: string;
-  contribution?: string;
   achievement?: string;
+  contribution?: string; //not used
   scope?: string;
 }
 
@@ -28,15 +29,15 @@ const KeyProjects: React.FC<KeyProjectsProps> = ({ projects }) => {
   const getProjectIcon = (name: string): string => {
     if (name.toLowerCase().includes('rail') || name.toLowerCase().includes('railroad')) return '🚄';
     if (name.toLowerCase().includes('bridge')) return '🌉';
-    if (name.toLowerCase().includes('highway') || name.toLowerCase().includes('parkway')) return '🛣️';
+    if (name.toLowerCase().includes('highway') || name.toLowerCase().includes('parkway') || name.toLowerCase().includes('section') || name.toLowerCase().includes('lanes')) return '🛣️';
     if (name.toLowerCase().includes('tunnel')) return '🚇';
     return '🏗️';
   };
 
   const getProjectCategory = (name: string): string => {
-    if (name.toLowerCase().includes('rail') || name.toLowerCase().includes('railroad')) return 'Rail Infrastructure';
-    if (name.toLowerCase().includes('bridge')) return 'Bridge Engineering';
-    if (name.toLowerCase().includes('highway') || name.toLowerCase().includes('parkway')) return 'Highway Construction';
+    if (name.toLowerCase().includes('rail') || name.toLowerCase().includes('railroad')) return 'High-Speed Rail';
+    if (name.toLowerCase().includes('bridge')) return 'Bridge Construction';
+    if (name.toLowerCase().includes('highway') || name.toLowerCase().includes('parkway') || name.toLowerCase().includes('section') || name.toLowerCase().includes('lanes')) return 'Highway Construction';
     if (name.toLowerCase().includes('tunnel')) return 'Tunneling';
     return 'Infrastructure';
   };
@@ -101,10 +102,10 @@ const KeyProjects: React.FC<KeyProjectsProps> = ({ projects }) => {
                 </div>
 
                 {/* Key Highlight */}
-                {(project.achievement || project.contribution || project.scope) && (
+                {project.scope && (
                   <div className="border-t border-slate-700 pt-3">
                     <p className="text-slate-300 text-sm">
-                      {project.achievement || project.contribution || project.scope}
+                      {project.scope}
                     </p>
                   </div>
                 )}
@@ -184,6 +185,14 @@ const KeyProjects: React.FC<KeyProjectsProps> = ({ projects }) => {
                     <h4 className="text-sm font-semibold text-slate-400 mb-1">Company</h4>
                     <p className="text-white">{selectedProject.company}</p>
                   </div>
+
+                  {selectedProject.client && (
+                    <div>
+                      <h4 className="text-sm font-semibold text-slate-400 mb-1">Client</h4>
+                      <p className="text-white">{selectedProject.client}</p>
+                    </div>
+                  )}
+
                   {selectedProject.location && (
                     <div>
                       <h4 className="text-sm font-semibold text-slate-400 mb-1">Location</h4>
