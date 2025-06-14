@@ -45,7 +45,7 @@ const About: React.FC<AboutProps> = ({ data, achievements }) => {
             {/* Professional Summary */}
             <div className="lg:col-span-2">
               <h3 className="text-2xl font-semibold text-white mb-6">
-                Infrastructure Development Leader
+                Infrastructure Delivery | Commercial Strategy | Team Leadership
               </h3>
               <div className="text-slate-300 text-lg leading-relaxed mb-8 space-y-4">
                 {data.about_description.split('\n\n').map((paragraph, index) => (
@@ -59,7 +59,7 @@ const About: React.FC<AboutProps> = ({ data, achievements }) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                    <span className="text-slate-300">Alternative Project Delivery (P3, CMAR, DB, Alliance)</span>
+                    <span className="text-slate-300">Alternative Project Delivery (P3, CMAR, DB, PDB)</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
@@ -79,7 +79,7 @@ const About: React.FC<AboutProps> = ({ data, achievements }) => {
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
-                    <span className="text-slate-300">Civil Engineering & Execution Strategy</span>
+                    <span className="text-slate-300">Multinational & Cross-Jurisdictional Experience</span>
                   </div>
                 </div>
               </div>
@@ -117,11 +117,11 @@ const About: React.FC<AboutProps> = ({ data, achievements }) => {
             </div>
             <div className="text-center p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 hover:border-green-500/50 transition-colors">
               <div className="text-3xl font-bold text-green-400 mb-2">14km+</div>
-              <div className="text-slate-300 text-sm">Tunnels Designed</div>
+              <div className="text-slate-300 text-sm">Tunnels</div>
             </div>
             <div className="text-center p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 hover:border-yellow-500/50 transition-colors">
               <div className="text-3xl font-bold text-yellow-400 mb-2">5km+</div>
-              <div className="text-slate-300 text-sm">Bridges Designed</div>
+              <div className="text-slate-300 text-sm">Bridges</div>
             </div>
           </div>
         </div>
