@@ -1,5 +1,17 @@
 import React, { useState } from 'react';
 
+// --- REACT-ICONS IMPORTS ---
+// Project-specific icons (kept as per your choices)
+import { PiTrain } from 'react-icons/pi';
+import { GiSuspensionBridge } from 'react-icons/gi';
+import { FaRoad, FaHardHat } from 'react-icons/fa';
+import { TbBuildingTunnel } from 'react-icons/tb';
+
+// UI Icons (switched to Material Design to resolve previous errors)
+import { MdLocationOn, MdChevronRight, MdClose } from 'react-icons/md';
+// --- END REACT-ICONS IMPORTS ---
+
+
 interface Project {
   name: string;
   value: string;
@@ -8,7 +20,7 @@ interface Project {
   client?: string;
   location?: string;
   achievement?: string;
-  contribution?: string; //not used
+  contribution?: string;
   scope?: string;
 }
 
@@ -26,12 +38,20 @@ const KeyProjects: React.FC<KeyProjectsProps> = ({ projects }) => {
     return value;
   };
 
-  const getProjectIcon = (name: string): string => {
-    if (name.toLowerCase().includes('rail') || name.toLowerCase().includes('railroad')) return '🚄';
-    if (name.toLowerCase().includes('bridge')) return '🌉';
-    if (name.toLowerCase().includes('highway') || name.toLowerCase().includes('parkway') || name.toLowerCase().includes('section') || name.toLowerCase().includes('lanes')) return '🛣️';
-    if (name.toLowerCase().includes('tunnel')) return '🚇';
-    return '🏗️';
+  const getProjectIcon = (name: string): JSX.Element => {
+    if (name.toLowerCase().includes('rail') || name.toLowerCase().includes('railroad')) {
+      return <PiTrain />;
+    }
+    if (name.toLowerCase().includes('bridge')) {
+      return <GiSuspensionBridge />;
+    }
+    if (name.toLowerCase().includes('highway') || name.toLowerCase().includes('parkway') || name.toLowerCase().includes('section') || name.toLowerCase().includes('lanes')) {
+      return <FaRoad />;
+    }
+    if (name.toLowerCase().includes('tunnel')) {
+      return <TbBuildingTunnel />;
+    }
+    return <FaHardHat />; // Default fallback icon
   };
 
   const getProjectCategory = (name: string): string => {
@@ -60,14 +80,15 @@ const KeyProjects: React.FC<KeyProjectsProps> = ({ projects }) => {
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {projects.map((project, index) => (
-              <div 
+              <div
                 key={index}
                 className="group bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
                 {/* Project Header */}
                 <div className="flex items-start justify-between mb-4">
-                  <div className="text-3xl">{getProjectIcon(project.name)}</div>
+                  {/* The text-3xl class on this div sets the icon's size and current color */}
+                  <div className="text-3xl text-white">{getProjectIcon(project.name)}</div>
                   <div className="text-right">
                     <div className="text-2xl font-bold text-blue-400">
                       {formatValue(project.value)}
@@ -92,10 +113,8 @@ const KeyProjects: React.FC<KeyProjectsProps> = ({ projects }) => {
                   </p>
                   {project.location && (
                     <p className="text-slate-500 text-xs mt-1 flex items-center">
-                      <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      </svg>
+                      {/* Using Material Design Icon for location */}
+                      <MdLocationOn className="w-3 h-3 mr-1" />
                       {project.location}
                     </p>
                   )}
@@ -113,9 +132,8 @@ const KeyProjects: React.FC<KeyProjectsProps> = ({ projects }) => {
                 {/* Click indicator */}
                 <div className="flex items-center justify-center mt-4 text-slate-500 group-hover:text-blue-400 transition-colors">
                   <span className="text-xs mr-1">Click for details</span>
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                  {/* Using Material Design Icon for arrow */}
+                  <MdChevronRight className="w-3 h-3" />
                 </div>
               </div>
             ))}
@@ -143,7 +161,7 @@ const KeyProjects: React.FC<KeyProjectsProps> = ({ projects }) => {
         </div>
       </div>
 
-      {/* Project Detail Modal */}
+      {/* Project Detail Modal - RESTORED TO ORIGINAL */}
       {selectedProject && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-slate-800 rounded-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
@@ -151,7 +169,8 @@ const KeyProjects: React.FC<KeyProjectsProps> = ({ projects }) => {
               {/* Modal Header */}
               <div className="flex items-start justify-between mb-6">
                 <div className="flex items-start">
-                  <div className="text-4xl mr-4">{getProjectIcon(selectedProject.name)}</div>
+                  {/* The text-4xl class on this div sets the icon's size and current color */}
+                  <div className="text-4xl text-white mr-4">{getProjectIcon(selectedProject.name)}</div>
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{selectedProject.name}</h3>
                     <div className="flex items-center text-slate-400">
@@ -168,13 +187,12 @@ const KeyProjects: React.FC<KeyProjectsProps> = ({ projects }) => {
                   onClick={() => setSelectedProject(null)}
                   className="text-slate-400 hover:text-white transition-colors"
                 >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
+                  {/* Using Material Design Icon for close button */}
+                  <MdClose className="w-6 h-6" />
                 </button>
               </div>
 
-              {/* Project Details */}
+              {/* Project Details - RESTORED */}
               <div className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>

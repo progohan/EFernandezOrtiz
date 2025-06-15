@@ -1,5 +1,27 @@
 import React from 'react';
 
+// --- REACT-ICONS IMPORTS ---
+// Leadership & Management Competencies
+import { FiTarget } from "react-icons/fi"; // Strategic Planning & Execution
+import { GoProject, GoProjectSymlink } from "react-icons/go"; // Project & Program Management, Project Types header
+import { RiTeamFill, RiMoneyDollarCircleLine, RiRobot3Line } from "react-icons/ri"; // Cross-Functional Team Leadership, Cost Optimization, Emerging Technologies
+import { FaRegHandshake, FaRegLightbulb } from "react-icons/fa"; // Stakeholder Engagement, Innovation
+import { LiaFileContractSolid } from "react-icons/lia"; // Contract Negotiation
+import { AiOutlineThunderbolt } from "react-icons/ai"; // Risk Assessment
+import { FaDatabase } from "react-icons/fa6"; // Big Data Analytics
+import { FaCloud, FaSuitcase, FaLaptopCode } from "react-icons/fa"; // Cloud Computing, Commercial Management, Technology Skills
+import { MdOutlineEngineering } from "react-icons/md"; // Civil Engineering
+import { GiTeamIdea, GiFireworkRocket } from "react-icons/gi"; // Mentorship, Technical Skills Header
+import { CiMedal } from "react-icons/ci"; // Leadership Skills header
+import { FaRegAddressBook } from "react-icons/fa"; // Delivery Models header
+import { TfiWorld } from "react-icons/tfi"; // International Projects
+import { BsSuitcaseLg } from "react-icons/bs"; // Executive Leadership
+
+// Note: The default '⭐' icon is not replaced directly here,
+// as getIcon will now return JSX, we'll use a specific default icon component if needed.
+// For now, we'll ensure all competencies have a mapped icon.
+// --- END REACT-ICONS IMPORTS ---
+
 interface CoreCompetenciesProps {
   competencies: string[];
   technicalExpertise: {
@@ -16,24 +38,27 @@ const CoreCompetencies: React.FC<CoreCompetenciesProps> = ({
   technicalExpertise,
   leadershipSkills,
 }) => {
-  const competencyIcons = {
-    'Strategic Planning & Execution': '🎯',
-    'Project & Program Management': '📊',
-    'Cross-Functional Team Leadership': '👥',
-    'Stakeholder Engagement & Communication': '🤝',
-    'Cost Optimization & Value Engineering': '💰',
-    'Contract Negotiation & Management': '📝',
-    'Risk Assessment & Mitigation': '⚡',
-    'Big Data Analytics & AI Applications': '🧠',
-    'Cloud Computing Architectures (AWS & Azure)': '☁️',
-    'Commercial Management': '💼',
-    'Civil Engineering': '🏗️',
-    'Mentorship & Team Development': '🌱',
-    'Innovation & Continuous Improvement': '🚀'
+  // Map competency names to their chosen React-Icon components
+  // Each function returns a JSX.Element (the icon component)
+  const competencyIconMap: { [key: string]: JSX.Element } = {
+    'Strategic Planning & Execution': <FiTarget />,
+    'Project & Program Management': <GoProject />,
+    'Cross-Functional Team Leadership': <RiTeamFill />,
+    'Stakeholder Engagement & Communication': <FaRegHandshake />,
+    'Cost Optimization & Value Engineering': <RiMoneyDollarCircleLine />,
+    'Contract Negotiation & Management': <LiaFileContractSolid />,
+    'Risk Assessment & Mitigation': <AiOutlineThunderbolt />,
+    'Big Data Analytics & AI Applications': <FaDatabase />,
+    'Cloud Computing Architectures (AWS & Azure)': <FaCloud />,
+    'Commercial Management': <FaSuitcase />,
+    'Civil Engineering': <MdOutlineEngineering />,
+    'Mentorship & Team Development': <GiTeamIdea />,
+    'Innovation & Continuous Improvement': <FaRegLightbulb />
   };
 
-  const getIcon = (competency: string): string => {
-    return competencyIcons[competency as keyof typeof competencyIcons] || '⭐';
+  const getIcon = (competency: string): JSX.Element => {
+    // Return the specific icon or a fallback if not found
+    return competencyIconMap[competency] || <GoProject />; // Using a sensible default if somehow a competency isn't mapped
   };
 
   return (
@@ -58,12 +83,13 @@ const CoreCompetencies: React.FC<CoreCompetenciesProps> = ({
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {competencies.map((competency, index) => (
-                <div 
+                <div
                   key={index}
                   className="p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:bg-slate-700/70"
                 >
                   <div className="flex items-start">
-                    <span className="text-2xl mr-3 mt-1">{getIcon(competency)}</span>
+                    {/* The text-2xl and text-white classes will apply to the icon's size and color */}
+                    <span className="text-2xl text-white mr-3 mt-1">{getIcon(competency)}</span>
                     <div>
                       <h4 className="text-white font-semibold leading-tight">{competency}</h4>
                     </div>
@@ -79,7 +105,8 @@ const CoreCompetencies: React.FC<CoreCompetenciesProps> = ({
             <div className="space-y-8">
               <div>
                 <h3 className="text-xl font-semibold text-blue-400 mb-4 flex items-center">
-                  <span className="text-2xl mr-3">🏗️</span>
+                  {/* Delivery Models Icon */}
+                  <span className="text-2xl mr-3"><FaRegAddressBook /></span>
                   Delivery Models
                 </h3>
                 <div className="space-y-3">
@@ -94,7 +121,8 @@ const CoreCompetencies: React.FC<CoreCompetenciesProps> = ({
 
               <div>
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4 flex items-center">
-                  <span className="text-2xl mr-3">🌉</span>
+                  {/* Project Types Icon */}
+                  <span className="text-2xl mr-3"><GoProjectSymlink /></span>
                   Project Types
                 </h3>
                 <div className="space-y-3">
@@ -112,7 +140,8 @@ const CoreCompetencies: React.FC<CoreCompetenciesProps> = ({
             <div className="space-y-8">
               <div>
                 <h3 className="text-xl font-semibold text-green-400 mb-4 flex items-center">
-                  <span className="text-2xl mr-3">⚙️</span>
+                  {/* Technical Skills Icon */}
+                  <span className="text-2xl mr-3"><GiFireworkRocket /></span>
                   Technical Skills
                 </h3>
                 <div className="space-y-3">
@@ -127,7 +156,8 @@ const CoreCompetencies: React.FC<CoreCompetenciesProps> = ({
 
               <div>
                 <h3 className="text-xl font-semibold text-purple-400 mb-4 flex items-center">
-                  <span className="text-2xl mr-3">💻</span>
+                  {/* Technology Skills Icon */}
+                  <span className="text-2xl mr-3"><FaLaptopCode /></span>
                   Technology Skills
                 </h3>
                 <div className="space-y-3">
@@ -139,10 +169,11 @@ const CoreCompetencies: React.FC<CoreCompetenciesProps> = ({
                   ))}
                 </div>
               </div>
-              
+
               <div>
                 <h3 className="text-xl font-semibold text-yellow-400 mb-4 flex items-center">
-                  <span className="text-2xl mr-3">🏅</span>
+                  {/* Leadership Skills Icon */}
+                  <span className="text-2xl mr-3"><CiMedal /></span>
                   Leadership Skills
                 </h3>
                 <div className="space-y-3">
@@ -167,21 +198,24 @@ const CoreCompetencies: React.FC<CoreCompetenciesProps> = ({
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center p-8 bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-xl border border-blue-500/30">
-                <div className="text-4xl mb-4">🤖</div>
+                {/* Emerging Technologies Icon */}
+                <div className="text-4xl mb-4 text-blue-400"><RiRobot3Line /></div>
                 <h4 className="text-xl font-semibold text-blue-400 mb-3">Emerging Technologies</h4>
                 <p className="text-slate-300 text-sm leading-relaxed">
                   AI, Big Data Analytics, and Cloud Computing integration in construction management
                 </p>
               </div>
               <div className="text-center p-8 bg-gradient-to-br from-green-600/20 to-blue-600/20 rounded-xl border border-green-500/30">
-                <div className="text-4xl mb-4">🌍</div>
+                {/* International Projects Icon */}
+                <div className="text-4xl mb-4 text-green-400"><TfiWorld /></div>
                 <h4 className="text-xl font-semibold text-green-400 mb-3">International Projects</h4>
                 <p className="text-slate-300 text-sm leading-relaxed">
                   Cross-cultural project management across North America and Europe
                 </p>
               </div>
               <div className="text-center p-8 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 rounded-xl border border-purple-500/30">
-                <div className="text-4xl mb-4">💼</div>
+                {/* Executive Leadership Icon */}
+                <div className="text-4xl mb-4 text-purple-400"><BsSuitcaseLg /></div>
                 <h4 className="text-xl font-semibold text-purple-400 mb-3">Executive Leadership</h4>
                 <p className="text-slate-300 text-sm leading-relaxed">
                   Strategic planning, business development, and organizational transformation
