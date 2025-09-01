@@ -1,5 +1,17 @@
 import React from 'react';
 
+// Import company logos
+import flatironDragadosLogo from '../assets/logos/flatiron_dragados.png';
+import accionaLogo from '../assets/logos/acciona.png';
+import sncLavalinLogo from '../assets/logos/snc_lavalin.png';
+import ferrovialLogo from '../assets/logos/ferrovial.png';
+import isoluxCorsanLogo from '../assets/logos/isolux_corsan.png';
+import teamEngineeringLogo from '../assets/logos/team_engineering.png';
+import fonorteLogo from '../assets/logos/fonorte.png';
+import sacyrLogo from '../assets/logos/sacyr.png';
+import prointecLogo from '../assets/logos/prointec.png';
+import genericContractorLogo from '../assets/logos/generic_contractor.png';
+
 interface ExperienceProps {
   experiences: Array<{
     position: string;
@@ -11,6 +23,21 @@ interface ExperienceProps {
 }
 
 const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
+
+  const getLogoForCompany = (companyName: string): string => {
+    const lowerCaseName = companyName.toLowerCase();
+    if (lowerCaseName.includes('flatiron') || lowerCaseName.includes('dragados')) return flatironDragadosLogo;
+    if (lowerCaseName.includes('acciona')) return accionaLogo;
+    if (lowerCaseName.includes('snc')) return sncLavalinLogo;
+    if (lowerCaseName.includes('ferrovial')) return ferrovialLogo;
+    if (lowerCaseName.includes('isolux')) return isoluxCorsanLogo;
+    if (lowerCaseName.includes('team engineering')) return teamEngineeringLogo;
+    if (lowerCaseName.includes('fonorte')) return fonorteLogo;
+    if (lowerCaseName.includes('sacyr')) return sacyrLogo;
+    if (lowerCaseName.includes('prointec')) return prointecLogo;
+    return genericContractorLogo; // Default placeholder
+  };
+
   return (
     <section id="experience" className="py-20 bg-slate-900">
       <div className="container mx-auto px-4">
@@ -48,9 +75,12 @@ const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
                             {exp.position}
                           </h3>
                           <div className="flex flex-col sm:flex-row sm:items-center text-slate-300">
-                            <span className="text-lg font-semibold text-blue-400">
-                              {exp.company}
-                            </span>
+                            <div className="flex items-center">
+                              <img src={getLogoForCompany(exp.company)} alt={`${exp.company} logo`} className="w-24 h-24 mr-6 rounded-lg" />
+                              <span className="text-lg font-semibold text-blue-400">
+                                {exp.company}
+                              </span>
+                            </div>
                             <span className="sm:mx-3 text-slate-500 hidden sm:inline">•</span>
                             <span className="flex items-center">
                               <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -87,27 +117,6 @@ const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-
-          {/* Summary Stats */}
-          <div className="mt-16 text-center">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="p-6 bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-xl border border-blue-500/30">
-                <div className="text-3xl font-bold text-blue-400 mb-2">9</div>
-                <div className="text-slate-300">Companies</div>
-                <div className="text-slate-400 text-sm mt-1">International Experience</div>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-cyan-600/20 to-blue-600/20 rounded-xl border border-cyan-500/30">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">3</div>
-                <div className="text-slate-300">Countries</div>
-                <div className="text-slate-400 text-sm mt-1">USA, Canada, Spain</div>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-green-600/20 to-blue-600/20 rounded-xl border border-green-500/30">
-                <div className="text-3xl font-bold text-green-400 mb-2">20+</div>
-                <div className="text-slate-300">Engineers</div>
-                <div className="text-slate-400 text-sm mt-1">Mentored & Trained</div>
-              </div>
             </div>
           </div>
         </div>
