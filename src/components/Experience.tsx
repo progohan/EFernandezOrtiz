@@ -1,17 +1,5 @@
 import React from 'react';
 
-// Import company logos
-import flatironDragadosLogo from '../assets/logos/flatiron_dragados.png';
-import accionaLogo from '../assets/logos/acciona.png';
-import sncLavalinLogo from '../assets/logos/snc_lavalin.png';
-import ferrovialLogo from '../assets/logos/ferrovial.png';
-import isoluxCorsanLogo from '../assets/logos/isolux_corsan.png';
-import teamEngineeringLogo from '../assets/logos/team_engineering.png';
-import fonorteLogo from '../assets/logos/fonorte.png';
-import sacyrLogo from '../assets/logos/sacyr.png';
-import prointecLogo from '../assets/logos/prointec.png';
-import genericContractorLogo from '../assets/logos/generic_contractor.png';
-
 interface ExperienceProps {
   experiences: Array<{
     position: string;
@@ -23,20 +11,6 @@ interface ExperienceProps {
 }
 
 const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
-
-  const getLogoForCompany = (companyName: string): string => {
-    const lowerCaseName = companyName.toLowerCase();
-    if (lowerCaseName.includes('flatiron') || lowerCaseName.includes('dragados')) return flatironDragadosLogo;
-    if (lowerCaseName.includes('acciona')) return accionaLogo;
-    if (lowerCaseName.includes('snc')) return sncLavalinLogo;
-    if (lowerCaseName.includes('ferrovial')) return ferrovialLogo;
-    if (lowerCaseName.includes('isolux')) return isoluxCorsanLogo;
-    if (lowerCaseName.includes('team engineering')) return teamEngineeringLogo;
-    if (lowerCaseName.includes('fonorte')) return fonorteLogo;
-    if (lowerCaseName.includes('sacyr')) return sacyrLogo;
-    if (lowerCaseName.includes('prointec')) return prointecLogo;
-    return genericContractorLogo; // Default placeholder
-  };
 
   return (
     <section id="experience" className="py-20 bg-slate-900">
@@ -76,7 +50,6 @@ const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
                           </h3>
                           <div className="flex flex-col sm:flex-row sm:items-center text-slate-300">
                             <div className="flex items-center">
-                              <img src={getLogoForCompany(exp.company)} alt={`${exp.company} logo`} className="w-24 h-24 mr-6 rounded-lg" />
                               <span className="text-lg font-semibold text-blue-400">
                                 {exp.company}
                               </span>
