@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing Eduardo's professional experie
 
 ## 🚀 Live Demo
 
-Visit the live website: [https://progohan.github.io/EFO](https://progohan.github.io/EFO)
+Visit the live website: [https://progohan.github.io/EfernandezOrtiz](https://progohan.github.io/EfernandezOrtiz)
 
 ## 📋 Features
 
@@ -38,8 +38,8 @@ Visit the live website: [https://progohan.github.io/EFO](https://progohan.github
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/progohan/EFO.git
-cd EFO
+git clone https://github.com/progohan/EfernandezOrtiz.git
+cd EfernandezOrtiz
 ```
 
 2. Install dependencies:
@@ -86,7 +86,7 @@ pnpm build
 ## 📁 Project Structure
 
 ```
-EFO/
+EfernandezOrtiz/
 ├── public/                 # Static assets
 │   ├── data.json          # Portfolio data
 │   ├── profile.jpg        # Profile image
