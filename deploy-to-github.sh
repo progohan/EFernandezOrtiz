@@ -22,7 +22,7 @@ read -p "Enter repository name (default: eduardo-portfolio-github): " REPO_NAME
 
 # Set default repo name if not provided
 if [ -z "$REPO_NAME" ]; then
-    REPO_NAME="eduardo-portfolio-github"
+    REPO_NAME="EFernandezOrtiz"
 fi
 
 echo ""
