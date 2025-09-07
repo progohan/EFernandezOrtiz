@@ -223,6 +223,17 @@
   ],
   "key_projects": [
     {
+      "name": "Long Bridge North PDB Project",
+      "value": "$1B+",
+      "role": "Project Engineer",
+      "company": "Flatiron Dragados USA",
+      "location": "Washington DC, USA",
+      "client": "VPRA",
+      "achievement": "Leading the delivery phases of a critical rail corridor expansion.",
+      "scope": "Construction of a series of upgraded and new bridges to increase rail capacity and reliability in the corridor.",
+      "timeframe": "2025 - Present"
+    },
+    {
       "name": "Susquehanna River Bridge CMAR Project",
       "value": "$2.7B",
       "role": "Project Commercial Manager",
