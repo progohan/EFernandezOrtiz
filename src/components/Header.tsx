@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ModeToggle } from './mode-toggle';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,41 +16,45 @@ const Header: React.FC = () => {
             Eduardo Fernández Ortiz
           </div>
           
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            <a href="#hero" onClick={handleLinkClick} className="text-foreground hover:text-primary transition-colors">
-              Home
-            </a>
-            <a href="#about" onClick={handleLinkClick} className="text-foreground hover:text-primary transition-colors">
-              About
-            </a>
-            <a href="#experience" onClick={handleLinkClick} className="text-foreground hover:text-primary transition-colors">
-              Experience
-            </a>
-            <a href="#competencies" onClick={handleLinkClick} className="text-foreground hover:text-primary transition-colors">
-              Expertise
-            </a>
-            <a href="#projects" onClick={handleLinkClick} className="text-foreground hover:text-primary transition-colors">
-              Projects
-            </a>
-            <a href="#education" onClick={handleLinkClick} className="text-foreground hover:text-primary transition-colors">
-              Education
-            </a>
-            <a href="#contact" onClick={handleLinkClick} className="text-foreground hover:text-primary transition-colors">
-              Contact
-            </a>
-          </div>
+          <div className="flex items-center space-x-4">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-8">
+              <a href="#hero" onClick={handleLinkClick} className="text-foreground hover:text-primary transition-colors">
+                Home
+              </a>
+              <a href="#about" onClick={handleLinkClick} className="text-foreground hover:text-primary transition-colors">
+                About
+              </a>
+              <a href="#experience" onClick={handleLinkClick} className="text-foreground hover:text-primary transition-colors">
+                Experience
+              </a>
+              <a href="#competencies" onClick={handleLinkClick} className="text-foreground hover:text-primary transition-colors">
+                Expertise
+              </a>
+              <a href="#projects" onClick={handleLinkClick} className="text-foreground hover:text-primary transition-colors">
+                Projects
+              </a>
+              <a href="#education" onClick={handleLinkClick} className="text-foreground hover:text-primary transition-colors">
+                Education
+              </a>
+              <a href="#contact" onClick={handleLinkClick} className="text-foreground hover:text-primary transition-colors">
+                Contact
+              </a>
+            </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-foreground hover:text-primary"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                    d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-            </svg>
-          </button>
+            <ModeToggle />
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden text-foreground hover:text-primary"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                      d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
